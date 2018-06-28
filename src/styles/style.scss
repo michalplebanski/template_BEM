@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body, h1, h2, h3, p, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+body { 
+	min-height: 100vh;
+	width: 100%;
+	max-width: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.jumbotron {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-image: url("https://cdn.pixabay.com/photo/2016/01/19/17/47/hiker-1149898_960_720.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+	header {
+		.navigation {
+			min-height: 10vh;
+			width: 100vw;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			h2 {
+				color: #FF3D00;
+				font-size: 6vh;
+				letter-spacing: 0.2vw;
+			}
+			ul {
+				display: flex;
+				list-style-type: none;
+				li {
+					margin: 0 1.5vw;
+					text-transform: uppercase;
+					a {
+						color: #fff;
+						text-decoration: none;
+						transition: 0.3s ease-in-out;
+						&:hover {
+							color: #FF3D00;
+						}
+					}
+					button {
+						display: flex;
+						align-items: flex-start;
+						position: relative;
+						bottom: 0.1vh;
+						background-color: transparent;
+						color: #fff;
+						font-size: 3vh;
+						cursor: pointer;
+						border: none;
+					}
+				}
+			}
+		}
+	}
+	&__content {
+		min-height: 55vh;
+		min-width: 75vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		color: #fff;
+		text-align: center;
+		letter-spacing: 0.2vw;
+		&--title {
+			width: 100%;
+			padding: 3.5vh 0;
+			font-size: 7vh;
+			text-transform: uppercase;
+			white-space: nowrap;
+  			overflow: hidden;
+			animation: type 3.5s 1s;
+			animation-iteration-count:infinite;
+		}
+		&--text {
+			padding: 0 2vw;
+			font-size: 2.5vh;
+		}
+	}
+}
+
+@keyframes type { 
+  from { width: 0; } 
+} 
+
+@media (max-width: 800px) {
+	.navigation {
+		height: 20vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		ul {
+			width: 100%;
+			justify-content: space-around;
+		}
+	}
+}
