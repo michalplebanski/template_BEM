@@ -1,29 +1,34 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+* {
+	box-sizing: border-box;
+}
+
 body, h1, h2, h3, p, ul, li {
 	margin: 0;
 	padding: 0;
 }
 
 body { 
-	min-height: 100vh;
-	width: 100%;
-	max-width: 100%;
 	font-family: 'Open Sans', sans-serif;
+	max-width: 100vw;
+	overflow-x: hidden;
 }
 
 .jumbotron {
 	min-height: 100vh;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-image: url("https://cdn.pixabay.com/photo/2016/01/19/17/47/hiker-1149898_960_720.jpg");
 	background-attachment: fixed;
 	background-size: cover;
-	header {
+	background-position: center;
 		.navigation {
 			min-height: 10vh;
 			width: 100vw;
+			max-width: 100%;
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
@@ -60,7 +65,6 @@ body {
 				}
 			}
 		}
-	}
 	&__content {
 		min-height: 55vh;
 		min-width: 75vw;
@@ -82,8 +86,96 @@ body {
 			animation-iteration-count:infinite;
 		}
 		&--text {
-			padding: 0 2vw;
+			padding: 0 4vw;
 			font-size: 2.5vh;
+		}
+	}
+}
+
+.traveling {
+	min-height: 120vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	&__header {
+		height: 20vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		padding: 4vh 1.5vw 0 1.5vw;
+		text-align: center;
+		&--title {
+			padding: 3vh 0;
+			font-size: 7vh;
+			word-spacing: 0.3vw;
+			letter-spacing: 0.2vw;
+			text-transform: capitalize;
+		}
+		&--text {
+			width: 70vw;
+			color: #878787;
+			font-size: 2.5vh;
+		}
+	}
+	&__content {
+		height: 70vh;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		&--example {
+			height: 100%;
+			width: 25vw;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin: 0 2vw;
+			img {
+				height: 50%;
+				width: 100%;
+			}
+			.example-text {
+				height: 50%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-start;
+				padding: 0 1.4vw;
+				border: 1px solid #878787;
+				h2 {
+					color: #FF3D00;
+					font-size: 3.5vh;
+					letter-spacing: 0.2vw;
+					text-transform: capitalize;
+				}
+				p {
+					margin: 4vh 0 2.5vh 0;
+					font-size: 2.3vh;
+					line-height: 3.2vh;
+					letter-spacing: 0.1vw;
+				}
+				button {
+					min-height: 6vh;
+					width: 8.5vw;
+					background-color: #FF3D00;
+					color: #fff;
+					font-size: 2.3vh;
+					cursor: pointer;
+					text-transform: capitalize;
+					border: none;
+					border-radius: 1vh;
+					transition: 0.3s ease-in-out;
+					&:hover {
+						background-color: transparent;
+						color: #FF3D00;
+						border: 0.2vh solid #FF3D00;
+					}
+				}
+			}
 		}
 	}
 }
@@ -93,14 +185,42 @@ body {
 } 
 
 @media (max-width: 800px) {
-	.navigation {
-		height: 20vh;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		ul {
-			width: 100%;
-			justify-content: space-around;
+	.jumbotron {
+		.navigation {
+			height: 20vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			ul {
+				width: 100%;
+				justify-content: space-around;
+			}
+		}
+		&__content {
+			&--title {
+				width: 70%;
+				white-space: normal;
+	  			overflow: visible; ;
+	  			animation-play-state: paused;
+			}
+		}
+	}
+}
+
+@media (max-width: 550px) {
+	.jumbotron {
+		min-height: 150vh;
+		.navigation {
+			height: 60vh;
+			flex-direction: column;
+			justify-content: flex-start;
+			ul {
+				flex-direction: column;
+				align-items: center;
+				li {
+					margin: 3vh 0;
+				}
+			}
 		}
 	}
 }
