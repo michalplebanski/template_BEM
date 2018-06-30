@@ -82,9 +82,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  margin: 5vh 0; }
   .traveling__header {
-    height: 20vh;
+    min-height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -99,14 +100,14 @@ body {
       text-transform: capitalize; }
     .traveling__header--text {
       width: 70vw;
-      color: #878787;
-      font-size: 2.5vh; }
+      font-size: 2.5vh;
+      color: #878787; }
   .traveling__content {
-    height: 70vh;
+    min-height: 70vh;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start; }
+    align-items: center; }
     .traveling__content--example {
       height: 100%;
       width: 25vw;
@@ -125,7 +126,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        padding: 0 1.4vw;
+        padding: 3vh 1.4vw;
         border: 1px solid #878787; }
         .traveling__content--example .example-text h2 {
           color: #FF3D00;
@@ -139,7 +140,7 @@ body {
           letter-spacing: 0.1vw; }
         .traveling__content--example .example-text button {
           min-height: 6vh;
-          width: 8.5vw;
+          min-width: 8.5vw;
           background-color: #FF3D00;
           color: #fff;
           font-size: 2.3vh;
@@ -153,9 +154,79 @@ body {
             color: #FF3D00;
             border: 0.2vh solid #FF3D00; }
 
+.services {
+  min-height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url("https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014713_960_720.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center; }
+  .services__header {
+    color: #fff;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4vh 1.5vw 0 1.5vw;
+    text-align: center; }
+    .services__header--title {
+      padding: 3vh 0;
+      font-size: 7vh;
+      word-spacing: 0.3vw;
+      letter-spacing: 0.2vw;
+      text-transform: capitalize; }
+    .services__header--text {
+      width: 70vw;
+      font-size: 2.5vh; }
+  .services__content {
+    min-height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 6vh 0; }
+    .services__content--example {
+      min-height: 30vh;
+      width: 28%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 2vh 1vw;
+      padding: 0 2.5vw;
+      background-color: #fff;
+      border-radius: 0.2vh;
+      box-shadow: 0.7vh 0.7vh 0.7vh #bab4b4; }
+      .services__content--example .example-title {
+        height: 10vh;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 2vh 0; }
+        .services__content--example .example-title i {
+          padding-right: 2vw;
+          color: #FF3D00;
+          font-size: 7vh; }
+        .services__content--example .example-title h3 {
+          font-size: 3.5vh; }
+      .services__content--example p {
+        color: #878787;
+        font-size: 2vh;
+        letter-spacing: 0.1vw; }
+
 @keyframes type {
   from {
     width: 0; } }
+
+@media (max-width: 1100px) {
+  .traveling__content {
+    min-height: 80vh; } }
 
 @media (max-width: 800px) {
   .jumbotron .navigation {
@@ -170,7 +241,15 @@ body {
     width: 70%;
     white-space: normal;
     overflow: visible;
-    animation-play-state: paused; } }
+    animation-play-state: paused; }
+  .traveling__content {
+    flex-wrap: wrap; }
+    .traveling__content--example {
+      width: 40vw;
+      margin: 3vh 2vw; }
+  .services__content--example {
+    width: 40%;
+    margin: 2vh 2vw; } }
 
 @media (max-width: 550px) {
   .jumbotron {
@@ -183,4 +262,8 @@ body {
         flex-direction: column;
         align-items: center; }
         .jumbotron .navigation ul li {
-          margin: 3vh 0; } }
+          margin: 3vh 0; }
+  .traveling__content--example {
+    width: 75vw; }
+  .services__content--example {
+    width: 60%; } }
