@@ -9,25 +9,28 @@
 </head>
 <body>
 	<main>
-		<section class="jumbotron">
+		<section id="jumbotron" class="jumbotron">
 			<header>
 				<nav class="navigation">
 					<h2>Peregrinate</h2>
 					<ul>
 						<li>
-							<a href="#">Home</a>
+							<a href="#jumbotron">Home</a>
 						</li>
 						<li>
-							<a href="#">About</a>
+							<a href="#traveling">About</a>
 						</li>
 						<li>
-							<a href="#">Gallery</a>
+							<a href="#services">Services</a>
 						</li>
 						<li>
-							<a href="#">Contact</a>
+							<a href="#news">News</a>
 						</li>
 						<li>
-							<button>
+							<a href="#contact">Contact</a>
+						</li>
+						<li>
+							<button class="search-button">
 								<i class="fas fa-search"></i>
 							</button>
 						</li>
@@ -39,7 +42,7 @@
 				<p class="jumbotron__content--text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
 			</div>
 		</section>
-		<section class="traveling">
+		<section id="traveling" class="traveling">
 			<div class="traveling__header">
 				<h2 class="traveling__header--title">Different way of traveling</h2>
 				<p class="traveling__header--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur dolorum, voluptatum possimus temporibus vel ab, nesciunt quod!</p>
@@ -50,7 +53,7 @@
 					<div class="example-text">
 						<h2>Family fun</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur dolorum</p>
-						<button>Read more</button>
+						<button class="traveling-button">Read more</button>
 					</div>
 				</div>
 				<div class="traveling__content--example">
@@ -58,7 +61,7 @@
 					<div class="example-text">
 						<h2>Beautiful Scenery</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur dolorum</p>
-						<button>Read more</button>
+						<button class="traveling-button">Read more</button>
 					</div>
 				</div>
 				<div class="traveling__content--example">
@@ -66,12 +69,12 @@
 					<div class="example-text">
 						<h2>Outdoor travel</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur dolorum</p>
-						<button>Read more</button>
+						<button class="traveling-button">Read more</button>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="services">
+		<section id="services" class="services">
 			<div class="services__header">
 				<h2 class="services__header--title">Services</h2>
 				<p class="services__header--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur dolorum, voluptatum possimus temporibus vel ab, nesciunt quod!
@@ -122,7 +125,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="news">
+		<section id="news" class="news">
 			<div class="news__header">
 				<h2 class="news__header--title">News & update</h2>
 				<p class="news__header--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur dolorum, voluptatum possimus temporibus vel ab, nesciunt quod!
@@ -134,7 +137,7 @@
 					<div class="example-text">
 						<h2>Free service seems to good to be true</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur dolorum</p>
-						<a class="read-more" href="#">Read more</a>
+						<a class="read-more" href="https://www.google.com/" target="_blank">Read more</a>
 					</div>
 					<div class="last-updated">
 						<p>Last updated 24 minutes ago</p>
@@ -145,7 +148,7 @@
 					<div class="example-text">
 						<h2>How do I get into a career in IT</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur dolorum</p>
-						<a class="read-more" href="#">Read more</a>
+						<a class="read-more" href="https://www.google.com/" target="_blank">Read more</a>
 					</div>
 					<div class="last-updated">
 						<p>Last updated 4 hours ago</p>
@@ -156,7 +159,7 @@
 					<div class="example-text">
 						<h2>What say customers about our products</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eum inventore consectetur dolorum</p>
-						<a class="read-more" href="#">Read more</a>
+						<a class="read-more" href="https://www.google.com/" target="_blank">Read more</a>
 					</div>
 					<div class="last-updated">
 						<p>Last updated 1 day ago</p>
@@ -164,6 +167,49 @@
 				</div>
 			</div>
 		</section>
+		<section id="contact" class="contact">
+			<div class="contact__info">
+				<div class="contact__info--example">
+					<h3>About us</h3>
+					<p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. lacinia eget consectetur sed, convallis at tellus..</p>
+				</div>
+				<div class="contact__info--example">
+					<h3>Contact us</h3>
+					<p class="address-info">Address:</p>
+					<p class="address-text">No.27 - 5549436 street lorem, Newyork City, USA</p>
+					<p class="phone">Phone: +68 643 453 824</p>
+					<p class="email-info">Email:</p>
+					<p class="email-text">email.example@.com</p>
+					<p class="fax">Fax: 112 4364</p>
+				</div>
+				<div class="contact__info--example">
+					<h3>Subscribe</h3>
+					<p>Itaque earum rerum hic tenetur a sapiente</p>
+					<div class="input">
+						<input type="text" placeholder="email">
+						<button class="input-button">
+							<i class="fas fa-search"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<footer class="contact__footer">
+				<div class="contact__footer--info">
+					<p>© 2018 Michał Plebański. All rights reserved</p>
+				</div>
+				<div class="contact__footer--social">
+					<p>Follow me on</p>
+					<button class="facebook">
+						<i class="fab fa-facebook-f"></i>
+					</button>
+					<button class="linkedin">
+						<i class="fab fa-linkedin-in"></i>
+					</button>
+				</div>
+			</footer>
+		</section>
 	</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	<script type="text/javascript" src="../src/script.js"></script>
 </body>
 </html>

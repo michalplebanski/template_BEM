@@ -306,6 +306,92 @@ body {
         color: #878787;
         font-size: 2vh; }
 
+.contact {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; }
+  .contact__info {
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5vw; }
+    .contact__info--example {
+      min-height: 50vh;
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 0 2vw; }
+      .contact__info--example h3 {
+        margin: 2vh 0;
+        color: #fff;
+        font-size: 4vh;
+        text-transform: capitalize; }
+      .contact__info--example p {
+        color: #878787;
+        font-size: 2.5vh;
+        letter-spacing: 0.1vw; }
+      .contact__info--example .address-info, .contact__info--example .phone, .contact__info--example .email-info, .contact__info--example .fax {
+        color: #FF3D00; }
+      .contact__info--example .address-text, .contact__info--example .email-info, .contact__info--example .fax {
+        margin: 1.3vh 0; }
+      .contact__info--example .input {
+        height: 4.4vh;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 2vh 0; }
+        .contact__info--example .input input {
+          height: 100%;
+          width: 80%;
+          padding: 0 1vw;
+          font-size: 3vh; }
+          .contact__info--example .input input placeholder {
+            padding: 0 1vw; }
+        .contact__info--example .input .input-button {
+          height: 100%;
+          min-width: 3vw;
+          background-color: #FF3D00;
+          color: #fff;
+          font-size: 2.5vh;
+          cursor: pointer;
+          border: none; }
+  .contact__footer {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw; }
+    .contact__footer--info {
+      color: #fff;
+      font-size: 2.5vh; }
+    .contact__footer--social {
+      width: 20vw;
+      display: flex;
+      justify-content: center;
+      color: #fff;
+      font-size: 2.5vh; }
+      .contact__footer--social .facebook, .contact__footer--social .linkedin {
+        min-height: 4.5vh;
+        min-width: 2.7vw;
+        margin: 0 1.5vw;
+        background-color: transparent;
+        color: #fff;
+        font-size: 3vh;
+        cursor: pointer;
+        border: none;
+        transition: 0.4s ease-in-out; }
+        .contact__footer--social .facebook:hover, .contact__footer--social .linkedin:hover {
+          color: #FF3D00; }
+
 @keyframes type {
   from {
     width: 0; } }
@@ -340,7 +426,25 @@ body {
     flex-wrap: wrap; }
     .news__content--example {
       width: 40vw;
-      margin: 3vh 2vw; } }
+      margin: 3vh 2vw; }
+  .contact__info {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3vh 0; }
+    .contact__info--example {
+      min-height: 20vh;
+      width: 60%;
+      margin: 2vh 0; } }
+
+@media (max-width: 651px) {
+  .contact__footer {
+    height: 20vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+    .contact__footer--social {
+      width: 80vw; } }
 
 @media (max-width: 550px) {
   .jumbotron {
